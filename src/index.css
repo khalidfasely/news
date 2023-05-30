@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+/* Fonts used https://fonts.google.com/share?selection.family=PT%20Serif%7CRoboto%20Condensed:wght@400;700%7CRoboto:wght@400;500%7CSource%20Sans%20Pro:wght@400;600;700 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: roboto ,'sans-serif';
+    }
+}
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+@layer components {
+    .section-title {
+        @apply bg-primary p-2 text-white cursor-default;
+    }
+
+    .category-block {
+        @apply bg-primary inline-block cursor-default p-2 text-white;
+    }
+    .category-link {
+        @apply font-roboto-condensed hover:text-primary focus:text-primary text-[#6776c4] transition;
+    }
+
+    .title-link {
+        @apply font-roboto-condensed hover:text-primary font-bold transition;
+    }
+
+    .text-4xl-responsive {
+        @apply text-2xl lg:text-4xl;
+    }
+}
